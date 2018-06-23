@@ -11,3 +11,14 @@ public class Student1 extends Observer{
     public void attach(){
         this.cr.add(this);
     }
+        @Override
+    public void detach(){
+        this.cr.remove(this);
+    }
+    
+    @Override
+    public void NotifyAll() {
+        System.out.println("In Student 1: "+this.cr.receiveMsg());
+    }
+    
+}
