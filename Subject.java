@@ -1,14 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkg1505042_observer;
 
-/**
- *
- * @author ms
- */
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Subject {
-    
-}
+
+    private List<Observer> observers = new ArrayList<Observer>();
+    private String state;
+
+    public String receiveMsg() {
+        return state;
+    }
+
+    public void sendMsg(String state) {
+        this.state = state;
+        NotifyAll();
+    }
+
