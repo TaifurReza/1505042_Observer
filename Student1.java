@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkg1505042_observer;
 
-/**
- *
- * @author ms
- */
-public class Student1 {
+
+public class Student1 extends Observer{
+    public Student1(Subject cr) {
+        this.cr=cr;
+    }
     
-}
+    @Override
+    public void attach(){
+        this.cr.add(this);
+    }
