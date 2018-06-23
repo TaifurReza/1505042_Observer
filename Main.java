@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkg1505042_observer;
 
-/**
- *
- * @author ms
- */
+
+import java.util.Scanner;
+
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Subject cr=new Subject();
+        Student1 std1=new Student1(cr);
+        std1.attach();
+        Student2 std2=new Student2(cr);
+        std2.attach();
+        Student3 std3=new Student3(cr);
+        std3.attach();
+        Scanner scn=new Scanner(System.in);
+        cr.sendMsg("No Ct tomorrow\n");
+
     }
-    
 }
